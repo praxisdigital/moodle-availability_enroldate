@@ -27,10 +27,10 @@ M.availability_enroldate.form.initInner = function(html, defaultTime) {
 };
 
 M.availability_enroldate.form.getNode = function(json) {
-    var html = '<span class="col-form-label p-r-1">' +
+    var html = '<span class="col-form-label pe-1">' +
                     M.util.get_string('direction_before', 'availability_enroldate') + '</span> <span class="availability-group">' +
             '<label><span class="accesshide">' + M.util.get_string('direction_label', 'availability_enroldate') + ' </span>' +
-            '<select name="direction" class="custom-select">' +
+            '<select name="direction" class="form-select">' +
             '<option value="&gt;=">' + M.util.get_string('enroldate_after', 'availability_enroldate') + '</option>' +
             '<option value="&lt;">' + M.util.get_string('enroldate_before', 'availability_enroldate') + '</option>' +
             '</select></label></span> ' + this.html;
@@ -112,7 +112,7 @@ M.availability_enroldate.form.getNode = function(json) {
  * gets an AJAX response.
  *
  * @method updateTime
- * @param {Y.Node} component Node for plugin controls
+ * @param {Y.Node} node Node for plugin controls
  */
 M.availability_enroldate.form.updateTime = function(node) {
     // After a change to the date/time we need to recompute the
